@@ -74,6 +74,9 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     dotenv (2.7.4)
+    dotenv-rails (2.7.4)
+      dotenv (= 2.7.4)
+      railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     fast_jsonapi (1.5)
       activesupport (>= 4.2)
@@ -178,6 +181,7 @@ DEPENDENCIES
   carrierwave
   carrierwave-aws
   dotenv
+  dotenv-rails
   fast_jsonapi
   friendly_id (~> 5.2, >= 5.2.5)
   impressionist

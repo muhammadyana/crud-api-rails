@@ -27,6 +27,7 @@ gem 'carrierwave'
 gem 'carrierwave-aws'
 
 gem 'dotenv'
+gem 'dotenv-rails'
 
 gem 'fast_jsonapi'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
