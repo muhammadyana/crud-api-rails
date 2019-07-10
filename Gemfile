@@ -29,6 +29,7 @@ gem 'carrierwave-aws'
 gem 'dotenv'
 gem 'dotenv-rails'
 
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'fast_jsonapi'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 
