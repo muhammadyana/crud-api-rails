@@ -24,6 +24,7 @@
 
 /db/schema.rb
 .env
+nginx.conf
 public/uploads/*
 
 config/database.yml
