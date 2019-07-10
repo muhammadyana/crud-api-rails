@@ -57,6 +57,15 @@ end
 
 group :development do
 	gem 'annotate'
+	gem 'capistrano',               require: false
+  gem 'capistrano-rvm',           require: false
+  gem 'capistrano-rails',         require: false
+  gem 'capistrano-bundler',       require: false
+  gem 'capistrano3-puma',         require: false
+  gem 'capistrano-rails-console', require: false
+  gem 'capistrano-rails-db'
+  gem 'capistrano-linked-files'
+	
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
