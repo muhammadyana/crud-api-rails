@@ -48,7 +48,7 @@ module Api
 
         # Only allow a trusted parameter "white list" through.
         def book_params
-          params.require(:book).permit(:title, :slug, :author, :cover, :publisher, :description, :genre, :price)
+          params.permit(:title, :slug, :author, :cover, :publisher, :description, :genre, :price)
         end
     end
   end

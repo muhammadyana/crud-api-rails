@@ -27,6 +27,13 @@ class Book < ApplicationRecord
   mount_uploader :cover, CoverUploader
 
   validates :title, :author, :description, presence: true   
-  validates :price, presence: true, numericality: {:greater_than => 0}   
+  validates :price, presence: true, numericality: {:greater_than => 0}
+
+  before_create :set_default_cover
+
+
+  def set_default_cover
+    self.remote_cover_url = "https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_solutions_manual/images/cover-web.png" if self.cover.nil?
+  end
   
 end
