@@ -21,6 +21,7 @@ gem 'puma', '~> 3.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'awesome_print'
 
 gem 'carrierwave'
@@ -30,7 +31,7 @@ gem 'dotenv'
 gem 'dotenv-rails'
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-gem 'fast_jsonapi'
+# gem 'fast_jsonapi'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 
 gem 'impressionist'

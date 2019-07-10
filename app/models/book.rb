@@ -35,5 +35,9 @@ class Book < ApplicationRecord
   def set_default_cover
     self.remote_cover_url = "https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_solutions_manual/images/cover-web.png" if self.cover.nil?
   end
+
+  def formated_price
+    helper.number_to_currency(self.price, unit: "IDR ", precision: 0)
+  end
   
 end
