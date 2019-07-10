@@ -1,6 +1,6 @@
 module Api
   module V1
-    class BooksController < ApplicationController
+    class BooksController < BaseController
       before_action :set_book, only: [:show, :update, :destroy]
 
       # GET /books
@@ -21,7 +21,7 @@ module Api
         if @book.save
           render json: @book, status: :created, location: @book
         else
-          render json: @book.errors, status: :unprocessable_entity
+          render json: {success: false, errors: @book.errors}, status: :unprocessable_entity
         end
       end
 
