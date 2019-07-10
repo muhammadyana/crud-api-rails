@@ -78,6 +78,8 @@ GEM
     fast_jsonapi (1.5)
       activesupport (>= 4.2)
     ffi (1.11.1)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.6.0)
@@ -101,6 +103,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
     mimemagic (0.3.3)
+    mini_magick (4.9.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -176,8 +179,10 @@ DEPENDENCIES
   carrierwave-aws
   dotenv
   fast_jsonapi
+  friendly_id (~> 5.2, >= 5.2.5)
   impressionist
   listen (>= 3.0.5, < 3.2)
+  mini_magick (~> 4.9, >= 4.9.2)
   name_of_person (~> 1.1)
   pagy
   pg (>= 0.18, < 2.0)

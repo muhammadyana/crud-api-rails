@@ -22,13 +22,23 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'awesome_print'
+
 gem 'carrierwave'
 gem 'carrierwave-aws'
+
 gem 'dotenv'
+
 gem 'fast_jsonapi'
+gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+
 gem 'impressionist'
+
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+
 gem 'name_of_person', '~> 1.1'
+
 gem 'pagy'
+
 gem 'rack-cors', :require => 'rack/cors'
 
 # Reduces boot times through caching; required in config/boot.rb
