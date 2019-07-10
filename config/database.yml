@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: crud-api_production
-  username: crud-api
+  database: crud_api_production
+  username: rails
   password: <%= ENV['CRUD-API_DATABASE_PASSWORD'] %>
