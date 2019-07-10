@@ -1,5 +1,5 @@
 class BookSerializer < ActiveModel::Serializer
-  attributes :title, :description, :price, :cover, :author, :publisher
+  attributes :id, :title, :description, :price, :cover, :author, :publisher
 
   def price
   	object.formated_price
