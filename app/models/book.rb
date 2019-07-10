@@ -33,7 +33,7 @@ class Book < ApplicationRecord
 
 
   def set_default_cover
-    self.remote_cover_url = "https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_solutions_manual/images/cover-web.png" if self.cover.nil?
+    self.remote_cover_url = "https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_solutions_manual/images/cover-web.png" if self.cover.url.nil?
   end
 
   def formated_price
