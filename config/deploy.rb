@@ -1,8 +1,35 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "crud-api"
+set :repo_url, "git@github.com:muhammadyana/crud-api-rails.git"
+set :rvm_ruby_version,  "2.6.2"
+set :puma_threads,      [1, 16]
+set :puma_workers,      1
+set :linked_files,      %w{.env config/master.key config/database.yml}
+set :linked_dirs,       %w{log tmp/cache tmp/sockets tmp/export tmp/pids public/assets public/uploads storage}
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# before "deploy:assets:precompile", "deploy:yarn_install"
+namespace :deploy do
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :publishing, :restart
+
+  desc 'Initial Deploy'
+  task :initial do
+    on roles(:app) do
+      before 'deploy:restart', 'puma:start'
+      invoke 'deploy'
+    end
+  end
+
+end
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

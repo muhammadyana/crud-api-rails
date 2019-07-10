@@ -7,6 +7,32 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+# BEGIN PRODUCTION CONFIGURATION
+set :application, 'crud-api'
+set :stage, :production
+set :rails_env, 'production'
+set :user, 'rails'
+set :puma_env, 'production'
+set :full_app_name, "#{fetch(:applicaton)}-#{fetch(:stage)}"
+set :ssh_options,       { forward_agent: true, auth_methods: %w(publickey) }
+set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :server_name,     "crud-api.yana.work"
+set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
+set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
+set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
+set :puma_access_log, "#{release_path}/log/puma.error.log"
+set :puma_error_log,  "#{release_path}/log/puma.access.log"
+
+# delayed job
+# set :delayed_job_args, "-n 1"
+
+# http://stackoverflow.com/questions/21036175/how-to-deploy-a-specific-revision-with-capistrano-3
+set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || 'master'
+
+role :app, %w{rails@128.199.232.216}
+role :web, %w{rails@128.199.232.216}
+role :db,  %w{rails@128.199.232.216}
+server '128.199.232.216', user: 'rails', roles: %w{web app}
 
 
 # role-based syntax
