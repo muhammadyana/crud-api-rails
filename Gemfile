@@ -36,7 +36,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 
 gem 'impressionist'
 
-gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'mini_magick'
 
 gem 'name_of_person', '~> 1.1'
 

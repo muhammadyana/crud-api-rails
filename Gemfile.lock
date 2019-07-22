@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/stympy/faker.git
-  revision: 511441003b5f283b0c516bfbceaecdabe4153a30
+  revision: be75ff9a2c208e57a95bf836c400513a13cfb67f
   branch: master
   specs:
     faker (1.9.6)
@@ -32,9 +32,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_model_serializers (0.10.9)
-      actionpack (>= 4.1, < 6)
-      activemodel (>= 4.1, < 6)
+    active_model_serializers (0.10.10)
+      actionpack (>= 4.1, < 6.1)
+      activemodel (>= 4.1, < 6.1)
       case_transform (>= 0.2)
       jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (5.2.3)
@@ -63,7 +63,7 @@ GEM
     arel (9.0.0)
     awesome_print (1.8.0)
     aws-eventstream (1.0.3)
-    aws-partitions (1.186.0)
+    aws-partitions (1.190.0)
     aws-sdk-core (3.59.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
@@ -149,7 +149,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
     mimemagic (0.3.3)
-    mini_magick (4.9.3)
+    mini_magick (4.9.5)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -162,7 +162,7 @@ GEM
     nio4r (2.4.0)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
-    pagy (3.3.2)
+    pagy (3.4.0)
     pg (1.1.4)
     puma (3.12.1)
     rack (2.0.7)
@@ -193,7 +193,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
-    rake (12.3.2)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -247,7 +247,7 @@ DEPENDENCIES
   friendly_id (~> 5.2, >= 5.2.5)
   impressionist
   listen (>= 3.0.5, < 3.2)
-  mini_magick (~> 4.9, >= 4.9.2)
+  mini_magick
   name_of_person (~> 1.1)
   pagy
   pg (>= 0.18, < 2.0)
